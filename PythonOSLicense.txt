@@ -1,0 +1,7 @@
+	PythonOS End User License Agreement
+---------------------------------------------------
+By Installing This Software You Agree To The Following Terms:
+
+1: TechnologyFlynn Is Not Responsible For Anything That Happens To Your Computer
+2: You Will Not Sell PythonOS
+3: If You Make Any Modifications, You Can Distribute Them As Long As You Give Credit To TechnologyFlynn
