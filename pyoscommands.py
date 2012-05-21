@@ -14,3 +14,6 @@ def checkcommand(command):
     elif command == "help":
         import webserver
         webserver.run()
+    elif command == "pyconsole":
+        import pyconsole
+        pyconsole.run()

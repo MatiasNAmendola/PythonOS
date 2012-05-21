@@ -10,19 +10,19 @@ import os
 print('Welcome To PythonOS')
 print("PythonOS is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.")
 print('Powered By The PYOS Core Framework Version 1.0')
-if pyoscore.datai(os.curdir + 'setupstatus.dat') == '0':
+if pyoscore.datai('setupstatus.dat') == '0':
     accountdata = {'username' : 'username', 'password' : 'password'}
     print ('PythonOS Setup Wizard')
     newusrname = input ('Username: ')
     newpass = input ('Password: ')
     accountdata['username'] = newusrname
     accountdata['password'] = newpass
-    pyoscore.datao(os.curdir + 'usrdata.dat', accountdata)
-    pyoscore.datao(os.curdir + 'setupstatus.dat', '1')
+    pyoscore.datao('usrdata.dat', accountdata)
+    pyoscore.datao('setupstatus.dat', '1')
     print ('Setup Complete!')
     print ('Please Reboot PythonOS To Finish Setup')
-elif pyoscore.datai(os.curdir + 'setupstatus.dat') == '1':
-    correctdata = (pyoscore.datai(os.curdir + 'usrdata.dat'))
+elif pyoscore.datai('setupstatus.dat') == '1':
+    correctdata = (pyoscore.datai('usrdata.dat'))
     # Login Code
     usrname = input('Username: ')
     password = input('Password: ')
@@ -60,7 +60,7 @@ elif pyoscore.datai(os.curdir + 'setupstatus.dat') == '1':
             if osconfigoption == '1':
                 import pyosappapi
                 vpbios = pyosappapi.pyosapp("TechnologyFlynn VirtualPC Bios", "TechnologyFlynn Innovations")
-                vpbios.dataaction('w',os.curdir + 'setupstatus.dat', '0')
+                vpbios.dataaction('w', 'setupstatus.dat', '0')
                 print ('Restart VirtualPC To Complete This Action')
                 input ('Press Enter To Exit')
             elif osconfigoption == '2':
